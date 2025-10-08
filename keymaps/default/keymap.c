@@ -12,15 +12,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * └───┴───┘
      */
     [0] = LAYOUT(
-        KC_A,   KC_B,
-        KC_C,   KC_D,
-        KC_E,   KC_F,
-        KC_G,   KC_H
+        KC_Q,   KC_W,   KC_E,   KC_R,   KC_T,
+        KC_A,   KC_S,   KC_D,   KC_F,   KC_G,
+        KC_Z,   KC_X,   KC_C,   KC_V,   KC_B,
+        KC_ESC, KC_TAB, KC_SPC, KC_NO, KC_NO,
+        KC_NO,    KC_NO,  KC_NO,  KC_NO,  KC_NO
     )
 };
 
 #if defined(ENCODER_MAP_ENABLE)
 const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
-    [0] =   {ENCODER_CCW_CW(KC_PAGE_UP, KC_PAGE_DOWN), ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(KC_LEFT, KC_RIGHT)}
+    [0] = {
+        [0] = ENCODER_CCW_CW(KC_PAGE_UP, KC_PAGE_DOWN),
+        [1] = ENCODER_CCW_CW(KC_VOLD, KC_VOLU),
+        [2] = ENCODER_CCW_CW(KC_LEFT, KC_RIGHT),
+        [3] = ENCODER_CCW_CW(KC_WH_D, KC_WH_U)
+    }
 };
 #endif

@@ -27,7 +27,7 @@
         "matrix_pins":{
             "right":{
                 "cols":["GP10", "GP11", "GP12", "GP13", "GP14"],
-                "rows":["GP6", "GP7", "GP8", "GP9"]
+                "rows":["GP6", "GP7", "GP8", "GP9", "GP27"]
             }
         }
     },
